@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran</title>
+    <style>
+        body {
+            background-color: #475455;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #fbfbfb;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: rgb(8, 1, 1);
+        }
+        input[type="text"], input[type="password"], input[type="email"] {
+            width: 80%;
+            padding: 8px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 5px 10px;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:active {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Form Pendaftaran</h2>
+    <input type="text" id="username" placeholder="Username">
+    <br>
+    <input type="email" id="email" placeholder="Email">
+    <br>
+    <input type="password" id="password" placeholder="Password">
+    <br>
+    <button onclick="validasiForm()">Daftar</button>
+</div>
+
+<script>
+    function validasiForm() {
+        var username = document.getElementById('username').value;
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+        if (username === "" || email === "" || password === "") {
+            alert("Semua data harus diisi.");
+        } else {
+            alert("Pendaftaran berhasil!");
+        }
+    }
+</script>
+
+</body>
+</html>
